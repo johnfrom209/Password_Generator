@@ -8,7 +8,8 @@ A particular funny issue occured when I was trying to get the user length for th
 Here is the code snippet:
 ```
 for (var i = 0; i < parseInt(passwordLength); i++) {
-    generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (passwordLength + 1)));
+    generatedPass = generatedPass + 
+    arrayConversion.charAt(Math.floor(Math.random() * (passwordLength + 1)));
     console.log(generatedPass);
   }
 ```
@@ -16,7 +17,7 @@ for (var i = 0; i < parseInt(passwordLength); i++) {
 Here is a screenshot of a generated password:
 ![Screenshot](./assets/images/passwordGeneratorSample.png)
 
-The following code snippet gives the user a prompt and depending on how they answer depends affects how the password is generated. Here is the code snippet for the prompts to the user:
+The following code snippet gives the user a prompt and depending on how they answer affects how the password is generated. Here is the code snippet for the prompts to the user:
 ```
 // this is a prompt asking if the user wants uppercase
 function askUpper() {
@@ -30,7 +31,6 @@ function askUpper() {
 }
 ```
 
-
 ## Installation
 
 No installation required. Simply go to github page for viewing.
@@ -42,7 +42,7 @@ Here is the link to look see how I built the webpage with HTML, CSS, and javasri
 
 ## Usage
 
-This is a webpage for viewing. Refer to the screenshot or click the Deployed Page link.
+By going to the deployed page link, you can try out the password generator. Start by clicking on the "Generate Password" button. The first prompt will ask for an input, please enter a number higher than 8 but less than 128. After that you will get a series of prompts for how you want the password to generate. By clicking "ok" means you are okay with them in the password. Hitting "Cancel" will register as a no and not be included in the final password generation. Refer to the screenshot for a sample of a random password generation.
 
 ## Credits
 
