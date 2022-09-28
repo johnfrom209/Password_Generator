@@ -87,12 +87,10 @@ function generatePassword() {
   //make possibleChar into string
   var arrayConversion = possibleChar.toString();
 
-
   for (var i = 0; i < parseInt(passwordLength); i++) {
     // I want to grab the char from the possible array
     //grab char at index of random number
-    generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (passwordLength + 1)));
-    console.log(generatedPass);
+    generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (parseInt(passwordLength) + 1)));
   }
 
   return generatedPass;
