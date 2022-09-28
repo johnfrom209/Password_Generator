@@ -1,4 +1,5 @@
 // Assignment Code
+// comments exist
 //The btn to start 
 var generateBtn = document.querySelector("#generate");
 
@@ -11,7 +12,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   // setting passwordText to the generated Password
   passwordText.value = password;
-
 }
 
 var specialArray = ["!#$\"%& '()*+,-./:;<=>?@[\]^_`{|}~"];
@@ -29,10 +29,12 @@ function generatePassword() {
 
   // this prompt is for asking the user for the password length > 8
   let passwordLength = window.prompt("Enter the desired length of the password", "Length");
+  // if cancelled by the user this will happen
   if (passwordLength == null) {
     passwordLength = "User cancelled the prompt.";
     return passwordLength;
   }
+  // make sure the submitted number is less than 128
   else if (parseInt(passwordLength) > 128) {
     passwordLength = "Needs to be less than 128.";
     return passwordLength;
@@ -52,20 +54,22 @@ function generatePassword() {
   //ask the user if they want numbers in the char
   var passNumber = askNum();
 
+  //declare array to store the possible char
   var possibleChar = [];
 
+  // if user wanted special char it gets added to the array
   if (passSpecial) {
     possibleChar = possibleChar.concat(specialArray);
   }
-
+  // if user wanted lower char it gets added to the array
   if (passLower) {
     possibleChar = possibleChar.concat(alphabet);
   }
-
+  // if user wanted num char it gets added to the array
   if (passNumber) {
     possibleChar = possibleChar.concat(numArray);
   }
-
+  // if user wanted Upper char it gets added to the array
   if (passUpper) {
     var temp = [];
     temp = alphabet.map(index => {
@@ -74,6 +78,8 @@ function generatePassword() {
     console.log(temp);
     possibleChar = possibleChar.concat(temp);
   }
+
+
 
   //make possibleChar into string
   var arrayConversion = possibleChar.toString();
