@@ -78,7 +78,11 @@ function generatePassword() {
     possibleChar = possibleChar.concat(temp);
   }
 
-
+  // final check to make sure there is an input on one of the prompts
+  // if all are false 
+  if (!passSpecial && !passLower && !passUpper && !passNumber) {
+    return "Nothing selected, no password generated!";
+  }
 
   //make possibleChar into string
   var arrayConversion = possibleChar.toString();
