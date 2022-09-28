@@ -75,7 +75,6 @@ function generatePassword() {
     temp = alphabet.map(index => {
       return index.toUpperCase();
     });
-    console.log(temp);
     possibleChar = possibleChar.concat(temp);
   }
 
@@ -101,10 +100,8 @@ function askSpecial() {
   var specialChar = false;
   if (confirm("Do you want special char?")) {
     specialChar = true;
-    console.log(specialChar);
     return true;
   } else {
-    console.log(specialChar);
     return false;
   }
 }
@@ -114,10 +111,8 @@ function askUpper() {
   var upperChar = false;
   if (confirm("Do you want uppercase char?")) {
     upperChar = true;
-    console.log(upperChar);
     return upperChar;
   } else {
-    console.log(upperChar);
     return upperChar;
   }
 }
@@ -127,10 +122,8 @@ function askLower() {
   var lowerChar = false;
   if (confirm("Do you want lowercase char?")) {
     lowerChar = true;
-    console.log(lowerChar);
     return lowerChar;
   } else {
-    console.log(lowerChar);
     return lowerChar;
   }
 }
@@ -140,10 +133,8 @@ function askNum() {
   var numChar = false;
   if (confirm("Do you want numbers?")) {
     numChar = true;
-    console.log(numChar);
     return numChar;
   } else {
-    console.log(numChar);
     return numChar;
   }
 }
