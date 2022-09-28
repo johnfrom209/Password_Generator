@@ -76,6 +76,7 @@ function generatePassword() {
       return index.toUpperCase();
     });
     possibleChar = possibleChar.concat(temp);
+
   }
 
   // final check to make sure there is an input on one of the prompts
@@ -86,13 +87,14 @@ function generatePassword() {
 
   //make possibleChar into string
   var arrayConversion = possibleChar.toString();
-
+  debugger
   for (var i = 0; i < parseInt(passwordLength); i++) {
     // I want to grab the char from the possible array
     //grab char at index of random number
-    generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (parseInt(passwordLength) + 1)));
+    generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (parseInt(arrayConversion.length))));
   }
 
+  console.log(generatedPass)
   return generatedPass;
 
 }
