@@ -13,8 +13,8 @@ for (var i = 0; i < parseInt(passwordLength); i++) {
   }
 ```
 
-Here is a screenshot of a generated password
-![Screenshot]()
+Here is a screenshot of a generated password:
+![Screenshot](./assets/images/passwordGeneratorSample.png)
 
 The following code snippet gives the user a prompt and depending on how they answer depends affects how the password is generated. Here is the code snippet for the prompts to the user:
 ```
