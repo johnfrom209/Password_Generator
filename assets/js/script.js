@@ -45,13 +45,13 @@ function generatePassword() {
     return passwordLength;
   }
 
-  // Ask the user if they want to allow special char
+  // Ask the user if they want to allow special char and returns a boolean
   var passSpecial = askSpecial();
-  //ask the user if they want uppercase char
+  //ask the user if they want uppercase char and returns a boolean
   var passUpper = askUpper();
-  //ask the user if they want lowercase char
+  //ask the user if they want lowercase char and returns a boolean
   var passLower = askLower();
-  //ask the user if they want numbers in the char
+  //ask the user if they want numbers in the char and returns a boolean
   var passNumber = askNum();
 
   //declare array to store the possible char
@@ -87,10 +87,11 @@ function generatePassword() {
 
   //make possibleChar into string
   var arrayConversion = possibleChar.toString();
-  debugger
+  
   for (var i = 0; i < parseInt(passwordLength); i++) {
     // I want to grab the char from the possible array
-    //grab char at index of random number
+    //grab char at index of random number 
+    //limit the random to the length of the string 
     generatedPass = generatedPass + arrayConversion.charAt(Math.floor(Math.random() * (parseInt(arrayConversion.length))));
   }
 
@@ -100,7 +101,7 @@ function generatePassword() {
 }
 
 function askSpecial() {
-  //this is a prompt asking for special char
+  //this is a prompt asking for special char and returns a boolean based on the user's choice
   var specialChar = false;
   if (confirm("Do you want special char?")) {
     specialChar = true;
@@ -110,7 +111,7 @@ function askSpecial() {
   }
 }
 
-// this is a prompt asking if the user wants uppercase
+// this is a prompt asking if the user wants uppercase and returns a boolean based on the user's choice
 function askUpper() {
   var upperChar = false;
   if (confirm("Do you want uppercase char?")) {
@@ -121,7 +122,7 @@ function askUpper() {
   }
 }
 
-// this is a prompt asking if the user wants lowercase
+// this is a prompt asking if the user wants lowercase and returns a boolean based on the user's choice
 function askLower() {
   var lowerChar = false;
   if (confirm("Do you want lowercase char?")) {
@@ -132,7 +133,7 @@ function askLower() {
   }
 }
 
-// this is a prompt asking if the user wants numbers
+// this is a prompt asking if the user wants numbers and returns a boolean based on the user's choice
 function askNum() {
   var numChar = false;
   if (confirm("Do you want numbers?")) {
@@ -143,6 +144,7 @@ function askNum() {
   }
 }
 
+//some psuedocode I'll leave here
 //run a prompt to confirm what the User wants
 //x4
 //boolean for each setting
